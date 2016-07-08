@@ -8,10 +8,40 @@ public class Song {
 	private int year;
 	private int track;
 
-	public void show() {
-		System.out.println(artist + title + " ( " + album + ", " + year + ", " + track + "번 track, " + composer + " 작곡)");
+	/////////////////
+	// 생성자 오버로드
+	// 빈 기본생성자
+	public Song() {
+		// TODO Auto-generated constructor stub
 	}
 
+	// 개발자가 임의로 만든 생성자
+	public Song(String artist, String title, String album, int year, int track, String composer) {
+		// TODO Auto-generated constructor stub
+
+	}
+
+	// 생성자 오버로드
+	public Song(String artist, String title) {
+		// TODO Auto-generated constructor stub
+		this(artist, title, null, 0, 0, null);
+
+	}
+
+	/////////////////////////
+	// 메소드 오버로드; 기존 메소드를 지우지 않고 내가 원하는 기능을가진 메소드를 만들어 boolean값으로 사용
+	public void show() {
+		System.out
+				.println(artist + title + " ( " + album + ", " + year + ", " + track + "번 track, " + composer + " 작곡)");
+	}
+
+	public void show(boolean visible) {
+		System.out.println("메소드 오버로드 됨");
+	}
+
+	
+	////////////////////////
+	// Getter, Setter
 	public String getTitle() {
 		return title;
 	}
@@ -59,6 +89,5 @@ public class Song {
 	public void setTrack(int track) {
 		this.track = track;
 	}
-
 
 }

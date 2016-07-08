@@ -10,7 +10,8 @@ public class SongApp {
 		song.setYear(2010);
 		song.setTrack(3);
 		song.setComposer("이수민");
-		
-		song.show();
+	
+		song.show();		// 기존 메소드
+		song.show(false);   // 오버로드 하는 메소드
 	}
 }
